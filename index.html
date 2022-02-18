@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/models/world.class.js"></script>
+
+    <script src="js/models/sounds.class.js"></script>
+    <script src="js/models/drawable-object.class.js"></script>
+    <script src="js/models/status-bar.class.js"></script>
+    <script src="js/models/bottle-bar.class.js"></script>
+    <script src="js/models/coin-bar.class.js"></script>
+    <script src="js/models/boss-bar.class.js"></script>
+    <script src="js/models/movable-objects.class.js"></script>
+    <script src="js/models/bottle.class.js"></script>
+    <script src="js/models/coin.class.js"></script>
+    <script src="js/models/heart.class.js"></script>
+    <script src="js/models/cloud.class.js"></script>
+    <script src="js/models/background-object.class.js"></script>
+    <script src="js/models/chicken.class.js"></script>
+    <script src="js/models/endboss.class.js"></script>
+    <script src="js/models/level.class.js"></script>
+    <script src="js/levels/level1.js"></script>
+    <script src="js/models/character.class.js"></script>
+    <script src="js/models/keyboard.class.js"></script>
+    <script src="js/models/throwable-object.class.js"></script>
+    <script src="js/models/game-over.class.js"></script>
+    <script src="js/models/won.class.js"></script>
+    <script src="js/game.js"></script>
+    <title>el pollo loco</title>
+</head>
+
+<body>
+    <div class="game-container">
+        <div id="canvas-container" class="canvas-container">
+            <div class="button-container">
+                <button title="Restart" onclick="restartGame()" id="restart" class="restart"></button>
+                <button title="Mute sound" onclick="toggleSound()" id="mute-sound"></button>
+            </div>
+            <canvas id="canvas" width="720" height="480"></canvas>
+            <div class="mobile-btn-container">
+                <div class="mobile-btn-left">
+                    <button id="left" class="button-icon mobile">
+                        <button id="right" class="button-icon mobile">
+                </div>
+                <div class="mobile-btn-right">
+                    <button id="space" class="button-icon mobile space">
+                        <button id="throw" class="button-icon mobile">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="intro" class="intro">
+        <div id="start-game" class="game-info-container">
+            <div id="game-info" class="game-info">
+                <h2>Game Info</h2>
+                <p>Help Pepe defeat the crazy chicken. Be careful it is not a normal chicken.</p>
+                <button onclick="startGame()" id="start-game" class="start-game">Start Game</button>
+                <div class="button-info-container">
+                    <img class="button-icon" src="img/icons/d-button.png" alt=""> <span>throw bottle</span>
+                    <img class="button-icon" src="img/icons/left-arrow-button.png" alt=""> <span>move left</span>
+                    <img class="button-icon" src="img/icons/right-arrow-button.png" alt=""> <span>move right</span>
+                    <img class="button-icon" src="img/icons/space-button.png" alt=""> <span>jump</span>
+                </div>
+            </div>
+            <div id="loader" class="loader-container">
+                <div class="loader"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-loader-container">
+        <ul class="loader-text">
+            <li>L</li>
+            <li>O</li>
+            <li>A</li>
+            <li>D</li>
+            <li>I</li>
+            <li>N</li>
+            <li>G</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+
+        </ul>
+    </div>
+    <script src="js/events.js"></script>
+
+</body>
+
+</html>
